@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Cup Years</title>
+    <title>Multiplication Table</title>
 </head>
 
 <body>
@@ -20,19 +20,15 @@
             document.write(sentence);
             lineBreak();
         }
+        
+        var multiplier = parseInt(prompt("Type the multiplier"));
 
-        var firstCup = 1930;
-        var limitCup = parseInt(prompt("Type the final year with cup"));
+        for (var multiplying = 1; multiplying <= 10; multiplying++) {
 
-        while(firstCup <= limitCup) {
-            show(firstCup + " has cup!");
-            firstCup = firstCup + 4;
+            show(multiplier * multiplying);
         }
 
-        show("These we're the cup years until " + limitCup);
-
     </script>
-
 </body>
 
 </html>

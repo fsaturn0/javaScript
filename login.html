@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <script>
+
+        function lineBreak() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function show(sentence) {
+            document.write(sentence);
+            lineBreak();
+        }
+
+        //login data
+        var loginSaved = "user";
+        var passwordSaved = "user123";
+
+        //attempts
+        var maxAttemps = 3;
+        var currentAttemp = 1;
+
+        while (currentAttemp <= maxAttemps) {
+
+            var loginTyped = prompt("Type your login:");
+            var passwordTyped = prompt("Type your password");
+
+            if (loginSaved == loginTyped && passwordSaved == passwordTyped) {
+                alert("Wellcome " + loginTyped);
+
+                //end request of login
+                currentAttemp = maxAttemps;
+            } else {
+                alert("The credencials are invalid, try again.");
+            }
+            currentAttemp++
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Years</title>
+</head>
+
+<body>
+    <script>
+
+        function lineBreak() {
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function show(sentence) {
+            document.write(sentence);
+            lineBreak();
+        }
+
+        var totalFamilyMembers = parseInt(prompt("Type the number of family members you have:"));
+        var counter = 1;
+        var totalYears = 0;
+
+        while(counter <= totalFamilyMembers) {
+            var year = parseInt(prompt("Type the family member's age:"));
+            totalYears = totalYears + year;
+            counter++
+        }
+
+        var averageYears = totalYears/totalFamilyMembers;
+        show("The average years of family members is: " + averageYears);
+
+    </script>
+</body>
+
+</html>

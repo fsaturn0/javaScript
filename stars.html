@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Cup Years</title>
+    <title>Stars</title>
 </head>
 
 <body>
@@ -16,23 +16,20 @@
             document.write("<br>");
         }
 
+
         function show(sentence) {
             document.write(sentence);
             lineBreak();
         }
 
-        var firstCup = 1930;
-        var limitCup = parseInt(prompt("Type the final year with cup"));
+        for (var line = 1; line <= 3; line++) {
+            for (let col = 1; col <=100; col++) {
+                document.write("*");
+            }
 
-        while(firstCup <= limitCup) {
-            show(firstCup + " has cup!");
-            firstCup = firstCup + 4;
+            lineBreak();
         }
-
-        show("These we're the cup years until " + limitCup);
-
     </script>
-
 </body>
 
 </html>
