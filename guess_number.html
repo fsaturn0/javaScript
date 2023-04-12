@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the number with input</title>
-</head>
+  </head>
 
-<body>
-    <input type="text">
-    <button>
-        
-    </button>
-</body>
+  <body>
+    <input type="text" />
+    <button>Compare</button>
 
+    <script>
+      //this var secret receive a random number sorted by method Math.random
+      var secret = Math.round(Math.random() * 10);
+
+      //This var save the node data input
+      var input = document.querySelector("input");
+      input.focus();
+
+      function verify() {
+        if (input.value == secret) {
+          alert("You're right!");
+        } else {
+          alert("You're wrong :(");
+        }
+
+        //set value empty
+        input.value = "";
+
+        //set focus on input
+        input.focus();
+      }
+
+      //This var is receiving data of tag button
+      var button = document.querySelector("button");
+
+      //When button are clicked, the function verify is called.
+      button.onclick = verify;
+    </script>
+  </body>
 </html>
