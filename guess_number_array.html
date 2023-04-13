@@ -21,21 +21,29 @@
         var number = 1;
 
         while (number <= amount) {
-
           var numberAleatory = sorter();
-          var found = false;
 
+          if (numberAleatory !== 0) {
+            var found = false;
 
-          if (found = false) {
-            secrets.push(numberAleatory);
+            for (var position = 0; position < secrets.length; position++) {
+              if (secrets[position] == numberAleatory) {
+                found = true;
+                break;
+              }
+            }
+
+            if (found == false) {
+              secrets.push(numberAleatory);
+              number++;
+            }
           }
-          number++;
         }
 
         return secrets;
       }
 
-      var secrets = sortNumbers(5);
+      var secrets = sortNumbers(10);
 
       console.log(secrets);
 
